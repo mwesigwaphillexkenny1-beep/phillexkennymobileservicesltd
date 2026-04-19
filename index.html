@@ -1,166 +1,54 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>College Admission</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #f4f9ff;
-        color: #333;
-    }header {
-    background: #0a3d62;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    animation: slideDown 1s ease-in-out;
-}
-
-nav {
-    background: #1e90ff;
-    padding: 10px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-.container {
-    padding: 20px;
-}
-
-.card {
-    background: white;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    animation: flyIn 1s ease forwards;
-}
-
-.card i {
-    font-size: 30px;
-    color: #1e90ff;
-    margin-bottom: 10px;
-}
-
-form input, form select, form button {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-form button {
-    background: #1e90ff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-form button:hover {
-    background: #0a3d62;
-}
-
-footer {
-    background: #0a3d62;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-
-/* Animations */
-@keyframes flyIn {
-    from {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-    }
-    to {
-        transform: translateY(0);
-    }
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phillex Kenny Mobile Services Ltd</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body><header>
-    <h1><i class="fas fa-university"></i>PHILLEX KENNY MOBILE SERVICES LIMITED</h1>
-    <p>The best in town</p>
-</header><nav>
-    <a href="#home">Home</a>
-    <a href="#About us">About us</a>
-    <a href="#Services">Services</a>
-    <a href="#contact">Contact</a>
-</nav><div class="container" id="home">
-    <div class="card">
-        <i class="fas fa-user-graduate"></i>
-        <h2>WELCOME CUSTOMERS</h2>
-        <p>Come now and grab cheap electronics from our shop.</p>
-    </div><div class="card" id="courses">
-    <i class="fas fa-book"></i>
-    <h2>Services Available</h2>
-    <ul>
-        <li>New simcard registration</li>
-        <li>New phones</li>
-        <li>Phone repair</li>
-        <li>Mobile banking</li>
-        <li>Phone accessories</li>
-        <li>Electronics</li>
-    </ul>
-</div>
-
-<div class="card" id="apply">
-    <i class="fas fa-file-alt"></i>
-    <h2>Submit your orders here</h2>
-    <form>
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email" required>
-        <select required>
-            <option value="">Select service</option>
-            <option>New simcard registration</option>
-            <option>New phones</option>
-            <option>Phone repair</option>
-            <option>Mobile banking</option>
-            <option>Phone accessories</option>
-            <option>Electronics</option>
-        </select>
-        <input type="tel" placeholder="Phone Number" required>
-        <button type="submit"><i class="fas fa-paper-plane"></i> Submit order</button>
-    </form>
-</div>
-
-<div class="card" id="contact">
-    <i class="fas fa-envelope"></i>
-    <h2>Contact Us</h2>
-    <p>Email: mwesigwaphillexkenny1@gmail.com</p>
-    <p>Phone: +256 744173817</p>
-    <p>Location: CMS trading cnetre iganga-jinja high way opposite iganga boys primary school</p>
-</div>
-
-</div><footer>
-    <p>&copy; 2026 MWESIGWA KENNETH-BIT STUDENT.</p>
-    <p>METROPOLITAN INTERNATIONAL UNIVERSITY KAMPALA CAMPUS
-    </p>
-</footer></body>
+<body>
+    <header>
+        <h1>Welcome to Phillex Kenny Mobile Services</h1>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>We offer a wide range of mobile services tailored to your needs.</p>
+            <ul>
+                <li>Mobile Repairs</li>
+                <li>Accessories</li>
+                <li>Software Updates</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Phillex Kenny Mobile Services Ltd. All Rights Reserved.</p>
+    </footer>
+    <script>
+        const form = document.getElementById('contactForm');
+        form.onsubmit = function(event) {
+            event.preventDefault();
+            // Add form submission logic
+            alert('Form submitted!');
+        };
+    </script>
+</body>
 </html>
